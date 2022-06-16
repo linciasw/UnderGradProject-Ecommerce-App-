@@ -7,6 +7,18 @@ require_once APP_DIR . "Config/Router.php";
 
 get($_ENV["PROJECT_PATH"] . 'home', 'app/Controllers/Homepage.php');
 
+
+
+
+//http://localhost/class_template/registration
+get($_ENV["PROJECT_PATH"] . 'registration', 'app/Controllers/Registration.php');
+post($_ENV["PROJECT_PATH"] . 'registration', 'app/Controllers/Registration.php');
+
+
+//http://localhost/class_template/login
+get($_ENV["PROJECT_PATH"] . 'login', 'app/Controllers/Login.php');
+post($_ENV["PROJECT_PATH"] . 'login', 'app/Controllers/Login.php');
+
 // ##################################################
 // ##################################################
 // ##################################################
