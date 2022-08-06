@@ -1,5 +1,5 @@
 <?php
-class Template
+class Product
 {
 
     protected $pdo = null;
@@ -12,5 +12,23 @@ class Template
         if (!isset($pdo->pdo)) return null;
         $this->pdo = $pdo->pdo;
     }
+
+
+
+    public function getAllProducts() {
+        $sql = "SELECT * FROM products";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+
+
+
+
+
+
+
 
 }
