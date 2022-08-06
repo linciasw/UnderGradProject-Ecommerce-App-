@@ -17,16 +17,16 @@ class User
     }
 
 
-    public function register($inputs){
+    public function register($inputs)
+    {
      $data = [
-            'first_name' => $inputs["first_name"],
-            'last_name' => $inputs["last_name"],
-            'email' => $inputs["email"],
-            'password' => password_hash($inputs["password"], PASSWORD_DEFAULT)
-        ];
+            "first_name" => $inputs["first_name"],
+            "last_name" => $inputs["last_name"],
+            "email" => $inputs["email"],
+            "password" => password_hash ($inputs["password"], PASSWORD_DEFAULT)
+     ];
 
-
-        $sql = "INSERT INTO `template_database`.`users`
+        $sql = "INSERT INTO `users`
         (`user_id`,
         `first_name`,
         `last_name`,
@@ -36,15 +36,16 @@ class User
         `user_type`)
         VALUES
         (
-            NULL,
-          :first_name,
-          :last_name,
-          :email,
-          :password,
-          CURRENT_TIMESTAMP(),
-          'user'
+        NULL,
+        :first_name,
+        :last_name,
+        :email,
+        :password,
+        CURRENT_TIMESTAMP(),
+        'user'
         );
         ";
+
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($data);
     }
@@ -56,25 +57,26 @@ class User
     {
         $sql = "SELECT * FROM users WHERE email = ?";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$inputs['email']]);
+        $stmt->execute([$inputs["email"]]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($user && password_verify($inputs['password'], $user['password']))
-        {
-            echo "valid!";
-            $user["password"] = null;
-            $_SESSION["current_user"] = $user;
+        if ($user && password_verify($inputs["password"], $user["password"])) {
+            echo "Found the user";
+           // $user["password"] = null;
+            //$_SESSION["current_user"] = $user;
             return true;
-
+        } else {
+            echo "No user found";
         }
-            return false;
-    }
+ 
+ 
+        return false;
+ 
+     }
 
 
+ 
 
-    public function showName(){
+} //end of class
 
-        echo "Marcus";
-    }
 
-}

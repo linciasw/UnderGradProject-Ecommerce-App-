@@ -9,23 +9,21 @@ $db_object = new Database();
 $user_object = new User($db_object);
 
 
-debug($_POST);
+//shows the user log in info on screen as an array
+//debug($_POST);
 
 
-
-// $user_object->showName();
-
-
-if (isset($_POST["registration"])) {
-    $user_object->register($_POST);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["registration"])) {
+        $user_object->register($_POST);
+    }
 }
 
 
+
+
 //load views
-
-
-
-
+require_once APP_DIR . "Views/header.php";
 require_once APP_DIR . "Views/pages/registration.php";
-
+require_once APP_DIR . "Views/footer.php";
 

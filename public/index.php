@@ -1,13 +1,13 @@
 <?php
 
+
+
 require_once "../app/Config/Paths.php";
 require_once APP_DIR . "Config/Router.php";
 
 
 
 get($_ENV["PROJECT_PATH"] . 'home', 'app/Controllers/Homepage.php');
-
-
 
 
 //http://localhost/class_template/registration
@@ -18,6 +18,43 @@ post($_ENV["PROJECT_PATH"] . 'registration', 'app/Controllers/Registration.php')
 //http://localhost/class_template/login
 get($_ENV["PROJECT_PATH"] . 'login', 'app/Controllers/Login.php');
 post($_ENV["PROJECT_PATH"] . 'login', 'app/Controllers/Login.php');
+
+
+
+//http://localhost/class_template/logout
+get($_ENV["PROJECT_PATH"] . 'logout', 'app/Controllers/Logout.php');
+post($_ENV["PROJECT_PATH"] . 'logout', 'app/Controllers/Logout.php');
+
+
+//http://localhost/class_template/store
+get($_ENV["PROJECT_PATH"] . 'store', 'app/Controllers/Store.php');
+post($_ENV["PROJECT_PATH"] . 'store', 'app/Controllers/Store.php');
+
+/*
+$serverEnv = 0;
+$configDir = dirname(_DIR_, 1) . "/app/Config";
+is_dir($configDir) ? true : exit("Invalid Directory: " . $configDir);
+require_once $configDir . "/Paths.php";
+require_once $configDir . "/Router.php";
+require_once $configDir . "/Debugger.php";
+*/
+
+/*
+get('/home', 'app/Controllers/Homepage.php');
+
+
+get('/registration', 'app/Controllers/Registration.php');
+post('/registration', 'app/Controllers/Registration.php');
+
+
+get('/login', 'app/Controllers/Login.php');
+post('/login', 'app/Controllers/Login.php');
+*/
+
+
+
+
+
 
 // ##################################################
 // ##################################################

@@ -30,7 +30,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 //load views
 require_once APP_DIR . "Views/header.php";
+require_once APP_DIR . "Views/pages/store.php";
 require_once APP_DIR . "Views/footer.php";
-require_once APP_DIR . "Views/pages/login.php";
-
-
