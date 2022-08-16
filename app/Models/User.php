@@ -26,7 +26,7 @@ class User
             "password" => password_hash ($inputs["password"], PASSWORD_DEFAULT)
      ];
 
-        $sql = "INSERT INTO `users`
+        $sql = "INSERT INTO `web_app_database`.`users`
         (`user_id`,
         `first_name`,
         `last_name`,

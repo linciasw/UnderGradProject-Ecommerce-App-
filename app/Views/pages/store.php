@@ -1,193 +1,216 @@
 <style>
+    body{
+        background-color: #eeeeee;
+    }
 
-.product-grid {
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    border: 1px solid #ebebeb;
-}
+    .container{
+        margin-top:50px;
+        margin-bottom: 50px;
+    }
 
-.product-grid .product-image {
-    overflow: hidden;
-    position: relative;
-}
-
-.product-grid .product-image a.image { 
-    display: block; 
-}
-
-.product-grid .product-image img {
-    width: 100%;
-    height: auto;
-    transition: all 0.05s ease 0s;
-}
-
-.product-grid:hover .product-image img { transform: scale(1.1); }
-
-.product-grid .product-sale-label {
-    color: #fff;
-    background-color: #b83616;
-    font-size: 13px;
-    text-transform: capitalize;
-    padding: 3px 18px;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-
-.product-grid .product-links {
-    background-color: #b83616;
-    padding: 7px 10px;
-    margin: 0;
-    list-style: none;
-    opacity: 0;
-    transform: translateY(-50%);
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transition: all 0.3s ease 0s
-}
-
-.product-grid:hover .product-links { opacity: 1; }
-
-.product-grid .product-links li {
-    margin: 0 0 7px;
-    transform: translateX(30px);
-    transition: all 0.3s ease 0s;
-}
-
-.product-grid .product-links li:nth-child(2) { transition: all 0.3s ease 0.05s; }
-.product-grid .product-links li:nth-child(3) { transition: all 0.3s ease 0.1s; }
-.product-grid .product-links li:nth-child(4) { transition: all 0.3s ease 0.15s; }
-.product-grid .product-links li:last-child { margin: 0; }
-.product-grid:hover .product-links li { transform: translateX(0); }
-.product-grid .product-links li a {
-    color: #fff;
-    font-size: 20px;
-    position: relative;
-    transition: all 0.3s ease 0s;
-}
-
-.product-grid .product-links li a:hover {
-    color: #fff;
-    text-shadow: 3px 3px 0 rgba(255,255,255,0.2);
-}
-
-.product-grid .product-links li a:before,
-.product-grid .product-links li a:after {
-    content: attr(data-tip);
-    color: #fff;
-    background: #000;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 18px;
-    text-shadow: none;
-    padding: 5px 10px;
-    white-space: nowrap;
-    display: none;
-    transform: translateY(-50%);
-    position: absolute;
-    right: 45px;
-    top: 50%;
-    transition: all 250ms ease-in-out 0s;
-}
-
-.product-grid .product-links li a:after {
-    content: '';
-    height: 10px;
-    width: 10px;
-    padding: 0;
-    transform: translateY(-50%) rotate(45deg);
-    right: 41px;
-    z-index: -1;
-}
-
-.product-grid .product-links li a:hover:before,
-.product-grid .product-links li a:hover:after {
-    display: block;
-}
-
-.product-grid .product-content {
-    text-align: left;
-    padding: 25px 15px;
-}
-
-.product-grid .title {
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin: 0 0 6px;
-}
-
-.product-grid .title a {
-    color: #222;
-    transition: all 0.3s ease 0s;
-}
-
-.product-grid .title a:hover { color: #b83616; }
-.product-grid .price {
-    color: #b83616;
-    font-size: 15px;
-    font-weight: 700;
-    margin: 0 0 4px;
-}
-
-.product-grid .price span {
-    color: #666;
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: line-through;
-}
-
-@media screen and (max-width: 990px) {
-    .product-grid{ margin: 0 0 30px; }
-
-}
     
+    a{
+        text-decoration: none !important;
+    }
+    
+
+    .card-product-list, .card-product-grid {
+        margin-bottom: 0;
+    }
+
+    .card {
+        
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.10rem;
+        margin-top: 10px;
+
+
+
+    }
+
+    .card-product-grid:hover {
+        -webkit-box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+        box-shadow: 0 4px 15px rgba(153, 153, 153, 0.3);
+        -webkit-transition: .3s;
+        transition: .3s;
+    }
+
+
+    .card-product-grid .img-wrap {
+        border-radius: 0.2rem 0.2rem 0 0;
+        height: 220px;
+    }
+
+
+    .card .img-wrap {
+        overflow: hidden;
+    }
+
+    .card-lg .img-wrap {
+        height: 280px;
+    }
+
+
+    .card-product-grid .img-wrap {
+        border-radius: 0.2rem 0.2rem 0 0;
+            height: 228px;
+            padding: 16px;
+    }
+
+    [class*='card-product'] .img-wrap img {
+        height: 100%;
+        max-width: 100%;
+        width: auto;
+        display: inline-block;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .img-wrap {
+        text-align: center;
+        display: block;
+    }
+
+    .card-product-grid .info-wrap {
+        overflow: hidden;
+        padding: 18px 20px;
+    }
+
+    [class*='card-product'] a.title {
+        color: #212529;
+        display: block;
+    }
+
+    .rating-stars {
+        display: inline-block;
+        vertical-align: middle;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        white-space: nowrap;
+        clear: both;
+    }
+
+
+    .rating-stars li.stars-active {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .rating-stars li {
+        display: block;
+        text-overflow: clip;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .card-product-grid .bottom-wrap {
+        padding: 18px;
+        border-top: 1px solid #e4e4e4;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 600;
+        color: #343a40;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: 0.45rem 0.85rem;
+        font-size: 1rem;
+        line-height: 1.5;
+            border-radius: 0.2rem;
+        
+    } 
+
+    .btn-primary {
+        color: #fff;
+        background-color: #3167eb;
+        border-color: #3167eb;
+    }
+
+    /*
+    .fa{
+            color: #FF5722;
+    }
+    */
+
+
+
 </style>
 
 
 <div class="container">
-    <div class="row">
+  	
+
+   <div class="row">
+
+   <?php foreach ($product_details as $data) :
+    $link = BASE_URL . "details/{$data["product_id"]}";   
+    ?>
+
+	<div class="col-md-4">
+		<figure class="card card-product-grid card-lg">
+			<a href="<?php echo $link; ?>" class="img-wrap" data-abc="true">
+                <img src="<?php echo BASE_URL . $data["product_image1"]; ?>"></a>
+			<figcaption class="info-wrap">
+
+   					<div class="row">
+
+   						<div class="col-md-8">
+
+   							<a href="<?php echo $link; ?>" class="title" data-abc="true"><?php echo $data["product_title"]; ?></a>
+   							
+   						</div>
+
+   						<div class="col-md-4">
+
+   							<div class="rating text-right">
+   								<i class="fa fa-star"></i>
+   								<i class="fa fa-star"></i>
+   								<i class="fa fa-star"></i>
+   								
+   					</div>
 
 
+            </figcaption>
+			<div class="bottom-wrap">
+				<a href="#" class="btn  btn-primary float-right" data-abc="true"> Buy now </a>
+				<div class="price-wrap">
+					<span class="price h5"></span>  $<?php echo $data["product_price"]; ?><br> <small class="text-success">Free shipping</small>
+				</div>
+			</div> 
+		</figure>
+	</div>
 
-
-
-<?php foreach ($product_details as $data): ?>
-
-    <div class="col-md-3 col-sm-6">
-        <div class="product-grid">
-            <div class="product-image">
-                <a href="#" class="image">
-                    <img class="pic-1" src="<?php echo BASE_URL . $data["product_image1"]; ?>">
-                </a>
-                <span class="product-sale-label">sale</span>
-                <ul class="product-links">
-                    <li><a href="#" data-tip="Add to Cart"><i class="fa fa-cart-arrow-down"></i></a></li>
-                    <li><a href="#" data-tip="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                    <li><a href="#" data-tip="Compare"><i class="fa fa-random"></i></a></li>
-                    <li><a href="#" data-tip="Quick View"><i class="far fa-eye"></i></a></li>
-                </ul>
-            </div>
-            <div class="product-content">
-                <h3 class="title"><a href="#"><?php echo $data["product_title"]; ?></a></h3>
-                <div class="price"><span>$85.50</span> $<?php echo $data["product_price"]; ?></div>
-            </div>
-        </div>
-    </div>
-
-<?php endforeach; ?>
-
-
-
-
-
-    </div>
+    <?php endforeach; ?>
+   							
+   						</div>
+   						
+   					</div>			
 
 
 </div>
 
-
-
-
-
+	

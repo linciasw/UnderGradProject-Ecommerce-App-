@@ -1,7 +1,8 @@
 <style>
 body {
 	color: #fff;
-	background: #3598dc;
+	/*background: #3598dc;*/
+	background: #f2f2f2;
 }
 .form-control {
 	min-height: 41px;
@@ -17,7 +18,7 @@ body {
 }
 .login-form {
 	width: 350px;
-	margin: 30px auto;
+	margin: 80px auto;
 	text-align: center;
 }
 .login-form h2 {
@@ -44,6 +45,7 @@ body {
 .login-form a {
 	color: #fff;
 	text-decoration: underline;
+
 }
 .login-form a:hover {
 	text-decoration: none;
@@ -72,6 +74,7 @@ body {
             <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
         </div>
         <p><a href="#">Lost your Password?</a></p>
+		<p class="text-center small">Don't have an account? <a href="http://localhost/web_app/registration">Sign up here!</a></p>
     </form>
-    <p class="text-center small">Don't have an account? <a href="#">Sign up here!</a></p>
+
 </div>

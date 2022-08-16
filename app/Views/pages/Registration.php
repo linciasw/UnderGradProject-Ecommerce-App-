@@ -1,143 +1,93 @@
 <style>
-
 body {
-	background: #dfe7e9;
-	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	/*background: #3598dc;*/
+	background: #f2f2f2;
 }
 .form-control {
-	font-size: 16px;
-	transition: all 0.4s;
-	box-shadow: none;
+	min-height: 41px;
+	background: #f2f2f2;
+	box-shadow: none !important;
+	border: transparent;
 }
 .form-control:focus {
-	border-color: #5cb85c;
+	background: #e2e2e2;
 }
-.form-control, .btn {
-	border-radius: 50px;
-	outline: none !important;
+.form-control, .btn {        
+	border-radius: 2px;
 }
-.signup-form {
-	width: 480px;
-	margin: 0 auto;
-	padding: 30px 0;
+.registration-form {
+	width: 350px;
+	margin: 80px auto;
+	text-align: center;
 }
-.signup-form form {
-	border-radius: 5px;
-	margin-bottom: 20px;
+.registration-form h2 {
+	margin: 10px 0 25px;
+}
+.registration-form form {
+	color: #7a7a7a;
+	border-radius: 3px;
+	margin-bottom: 15px;
 	background: #fff;
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	padding: 40px;
+	padding: 30px;
 }
-.signup-form a {
-	color: #5cb85c;
-}    
-.signup-form h2 {
-	text-align: center;
-	font-size: 34px;
-	margin: 10px 0 15px;
-}
-.signup-form .hint-text {
-	color: #999;
-	text-align: center;
-	margin-bottom: 20px;
-}
-.signup-form .form-group {
-	margin-bottom: 20px;
-}
-.signup-form .btn {        
-	font-size: 18px;
-	line-height: 26px;
-	font-weight: bold;
-	text-align: center;
-}
-.signup-btn {
-	text-align: center;
-	border-color: #5cb85c;
-	transition: all 0.4s;
-}
-.signup-btn:hover {
-	background: #5cb85c;
-	opacity: 0.8;
-}
-.or-seperator {
-	margin: 50px 0 15px;
-	text-align: center;
-	border-top: 1px solid #e0e0e0;
-}
-.or-seperator b {
-	padding: 0 10px;
-	width: 40px;
-	height: 40px;
+.registration-form .btn {        
 	font-size: 16px;
-	text-align: center;
-	line-height: 40px;
-	background: #fff;
-	display: inline-block;
-	border: 1px solid #e0e0e0;
-	border-radius: 50%;
-	position: relative;
-	top: -22px;
-	z-index: 1;
-}
-.social-btn .btn {
-	color: #fff;
-	margin: 10px 0 0 15px;
-	font-size: 15px;
-	border-radius: 50px;
-	font-weight: normal;
+	font-weight: bold;
+	background: #3598dc;
 	border: none;
-	transition: all 0.4s;
-}	
-.social-btn .btn:first-child {
-	margin-left: 0;
+	outline: none !important;
 }
-.social-btn .btn:hover {
-	opacity: 0.8;
+.registration-form .btn:hover, .registration-form .btn:focus {
+	background: #2389cd;
 }
-.social-btn .btn-primary {
-	background: #507cc0;
+.registration-form a {
+	color: #fff;
+	text-decoration: underline;
+
 }
-.social-btn .btn-info {
-	background: #64ccf1;
+.registration-form a:hover {
+	text-decoration: none;
 }
-.social-btn .btn-danger {
-	background: #df4930;
+.registration-form form a {
+	color: #7a7a7a;
+	text-decoration: none;
 }
-.social-btn .btn i {
-	float: left;
-	margin: 3px 10px;
-	font-size: 20px;
+.registration-form form a:hover {
+	text-decoration: underline;
 }
-    
+
 </style>
 
 
-
-<div class="signup-form">
-    <form action="registration.php" method="post">
-		<h2>Create an Account</h2>
-		<p class="hint-text">Sign up with your social media account or email address</p>
-		<div class="social-btn text-center">
-			<a href="#" class="btn btn-primary btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
-			<a href="#" class="btn btn-info btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
-			<a href="#" class="btn btn-danger btn-lg"><i class="fa fa-google"></i> Google</a>
-		</div>
-		<div class="or-seperator"><b>or</b></div>
-        <div class="form-group">
-        	<input type="text" class="form-control input-lg" name="username" placeholder="Username" required="required">
+<div class="registration-form">
+    <form action="registration" method="post">
+        <h2 class="text-center">Registration</h2>   
+        <div class="form-group has-error">
+        	<input type="text" class="form-control" name="first_name" placeholder="First Name" required="required">
+        </div>
+		<div class="form-group has-error">
+        	<input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required">
         </div>
 		<div class="form-group">
-        	<input type="email" class="form-control input-lg" name="email" placeholder="Email Address" required="required">
-        </div>
+            <input type="text" class="form-control" name="email" placeholder="Email Address" required="required">
+        </div>        
 		<div class="form-group">
-            <input type="password" class="form-control input-lg" name="password" placeholder="Password" required="required">
-        </div>
-		<div class="form-group">
-            <input type="password" class="form-control input-lg" name="confirm_password" placeholder="Confirm Password" required="required">
+            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
         </div>  
+		<div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Confirm Password" required="required">
+        </div>   
         <div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block signup-btn">Sign Up</button>
+            <button type="submit" name="registration" class="btn btn-primary btn-lg btn-block">Register</name=button>
         </div>
+
+
     </form>
-    <div class="text-center">Already have an account? <a href="#">Login here</a></div>
+
+
 </div>
+
+
+                    

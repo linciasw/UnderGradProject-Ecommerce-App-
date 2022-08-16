@@ -24,11 +24,14 @@ class Product
     }
 
 
-
-
-
-
-
+    
+    public function getProductDetails($product_id) {
+        $sql = "SELECT * FROM products WHERE product_id = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$product_id]);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
 
 
 }
