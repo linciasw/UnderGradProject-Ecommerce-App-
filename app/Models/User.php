@@ -23,7 +23,7 @@ class User
             "first_name" => $inputs["first_name"],
             "last_name" => $inputs["last_name"],
             "email" => $inputs["email"],
-            "password" => password_hash ($inputs["password"], PASSWORD_DEFAULT)
+            "password" => password_hash($inputs["password"], PASSWORD_DEFAULT)
      ];
 
         $sql = "INSERT INTO `web_app_database`.`users`
@@ -62,8 +62,8 @@ class User
 
         if ($user && password_verify($inputs["password"], $user["password"])) {
             echo "Found the user";
-           // $user["password"] = null;
-            //$_SESSION["current_user"] = $user;
+            $user["password"] = null;
+            $_SESSION["current_user"] = $user;
             return true;
         } else {
             echo "No user found";

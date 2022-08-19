@@ -235,17 +235,17 @@ $(document).on("click", ".action-buttons .dropdown-menu", function(e){
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<a href="#" class="navbar-brand">Brand<b>Name</b></a>  		
+	<a href="#" class="navbar-brand">Silicon<b>TT</b></a>  		
 	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<!-- Collection of nav links, forms, and other content for toggling -->
 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 		<div class="navbar-nav">
-			<a href="#" class="nav-item nav-link">Home</a>
+			<a href="http://localhost/web_app/homepage" class="nav-item nav-link">Home</a>
 			<a href="#" class="nav-item nav-link">About</a>			
 			<div class="nav-item dropdown">
-				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Services</a>
+				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Shopping Tools</a>
 				<div class="dropdown-menu">					
 					<a href="#" class="dropdown-item">Web Design</a>
 					<a href="#" class="dropdown-item">Web Development</a>
@@ -253,7 +253,7 @@ $(document).on("click", ".action-buttons .dropdown-menu", function(e){
 					<a href="#" class="dropdown-item">Digital Marketing</a>
                 </div>
             </div>
-			<a href="#" class="nav-item nav-link active">Pricing</a>
+			<a href="http://localhost/web_app/store" class="nav-item nav-link active">Products</a>
 			<a href="#" class="nav-item nav-link">Blog</a>
 			<a href="#" class="nav-item nav-link">Contact</a>
 		</div>
@@ -277,7 +277,7 @@ $(document).on("click", ".action-buttons .dropdown-menu", function(e){
 
 		<div class="navbar-nav ml-auto action-buttons">
 			<div class="nav-item dropdown">
-				<a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Login</a>
+				<a href="http://localhost/web_app/login" data-toggle="dropdown" class="nav-link dropdown-toggle mr-4">Login</a>
 			</div>
 
 			<!--Dropdown menu for Log In commented out
@@ -313,7 +313,7 @@ $(document).on("click", ".action-buttons .dropdown-menu", function(e){
 
 			
 			<div class="nav-item dropdown">
-				<a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle sign-up-btn">Sign up</a>
+				<a href="http://localhost/web_app/registration" data-toggle="dropdown" class="btn btn-primary dropdown-toggle sign-up-btn">Sign up</a>
 			</div>
 				<!--Dropdown menu for Sign up commented out
                 <div class="dropdown-menu action-form">

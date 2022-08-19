@@ -74,11 +74,8 @@ body {
             <input type="text" class="form-control" name="email" placeholder="Email Address" required="required">
         </div>        
 		<div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
-        </div>  
-		<div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Confirm Password" required="required">
-        </div>   
+            <input type="text" class="form-control" name="password" placeholder="Password" required="required">
+        </div>    
         <div class="form-group">
             <button type="submit" name="registration" class="btn btn-primary btn-lg btn-block">Register</name=button>
         </div>

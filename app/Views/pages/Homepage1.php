@@ -124,7 +124,6 @@
     <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 -->
     <div class="row">
-    DEMO 1 Item
       <div class="col-md-12 mb-3 mb-lg-0">
         <div class="hover hover-1 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt="">
           <div class="hover-overlay"></div>
