@@ -13,47 +13,63 @@ require_once APP_DIR . "Config/Router.php";
 
 
 
-//http://localhost/class_template/registration
+//http://localhost/web_app/registration
 get($_ENV["PROJECT_PATH"] . 'registration', 'app/Controllers/Registration.php');
 post($_ENV["PROJECT_PATH"] . 'registration', 'app/Controllers/Registration.php');
 
 
-//http://localhost/class_template/login
+//http://localhost/web_app/login
 get($_ENV["PROJECT_PATH"] . 'login', 'app/Controllers/Login.php');
 post($_ENV["PROJECT_PATH"] . 'login', 'app/Controllers/Login.php');
 
 
 
-//http://localhost/class_template/logout
+//http://localhost/web_app/logout
 get($_ENV["PROJECT_PATH"] . 'logout', 'app/Controllers/Logout.php');
 post($_ENV["PROJECT_PATH"] . 'logout', 'app/Controllers/Logout.php');
 
 
-//http://localhost/class_template/store
+//http://localhost/web_app/store
 get($_ENV["PROJECT_PATH"] . 'store', 'app/Controllers/Store.php');
 post($_ENV["PROJECT_PATH"] . 'store', 'app/Controllers/Store.php');
 
 
-//http://localhost/class_template/templates
+//http://localhost/web_app/templates
 get($_ENV["PROJECT_PATH"] . 'templates', 'app/Controllers/Templates.php');
 post($_ENV["PROJECT_PATH"] . 'templates', 'app/Controllers/Templates.php');
 
 
 
-//http://localhost/class_template/templates
+//http://localhost/web_app/templates
 get($_ENV["PROJECT_PATH"] . 'homepage', 'app/Controllers/Homepage.php');
 post($_ENV["PROJECT_PATH"] . 'homepage', 'app/Controllers/Homepage.php');
 
 
 
-//http://localhost/class_template/templates
+//http://localhost/web_app/templates
 get($_ENV["PROJECT_PATH"] . 'details/$id', 'app/Controllers/Details.php');
 post($_ENV["PROJECT_PATH"] . 'details/$id', 'app/Controllers/Details.php');
 
 
-//http://localhost/class_template/templates
+//http://localhost/web_app/templates
 get($_ENV["PROJECT_PATH"] . 'cart', 'app/Controllers/Cart.php');
 post($_ENV["PROJECT_PATH"] . 'cart', 'app/Controllers/Cart.php');
+
+
+//http://localhost/web_app/templates
+get($_ENV["PROJECT_PATH"] . 'checkout', 'app/Controllers/checkout.php');
+post($_ENV["PROJECT_PATH"] . 'checkout', 'app/Controllers/checkout.php');
+
+
+//http://localhost/web_app/templates
+get($_ENV["PROJECT_PATH"] . 'checkout/stripe', 'app/Controllers/checkout.php');
+post($_ENV["PROJECT_PATH"] . 'checkout/stripe', 'app/Controllers/checkout.php');
+
+
+
+//http://localhost/web_app/templates
+get($_ENV["PROJECT_PATH"] . 'checkout/success/$payment/$id', 'app/Controllers/Checkout-success.php');
+post($_ENV["PROJECT_PATH"] . 'checkout/success/$payment/$id', 'app/Controllers/Checkout-success.php');
 
 
 

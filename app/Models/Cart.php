@@ -21,8 +21,7 @@ class Cart
 
 
     
-    public function getCartDetails($user_id) 
-    {
+    public function getCartDetails($user_id) {
         $sql = "
         SELECT * FROM cart, products 
         WHERE cart.product_id = products.product_id 
@@ -35,9 +34,11 @@ class Cart
 
 
         foreach ($result as $product) {
-            $this->subtotal += $product["product_price"];
+            $this->subtotal += $product["product_price"] * $product["cart_quantity"]; 
         }
 
+        $this->cart_details = $result;
+    
 
         return $result;
     }
@@ -46,8 +47,7 @@ class Cart
 
 
 
-    public function addToCart($user_id, $product_id, $cart_quantity)
-    {
+    public function addToCart($user_id, $product_id, $cart_quantity) {
         $data = [
             "user_id" => $user_id,
             "product_id" => $product_id,
@@ -78,8 +78,7 @@ class Cart
 
 
 
-    public function removeFromCart($cart_id, $user_id)
-    {
+    public function removeFromCart($cart_id, $user_id) {
         $sql = "DELETE FROM cart WHERE cart_id = ? AND user_id = ?";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$cart_id, $user_id]);
@@ -89,13 +88,35 @@ class Cart
 
 
 
-    public function updateCart($user_id, $product_id, $cart_quantity)
-    {
+    public function updateCart($user_id, $product_id, $cart_quantity) {
         $sql = "UPDATE `cart` SET `cart_quantity` = ? WHERE `cart`.`user_id` = ? AND product_id = ?;";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$cart_quantity, $user_id, $product_id]);
 
 
     }
+
+
+
+    public function getSubtotal(){
+        return $this->subtotal;
+
+
+    }
+
+
+
+    public function getTotal(){
+        return $this->total;
+
+    }
+    
+
+    public function calculateTotal(){
+        $this->total = $this->subtotal;
+
+    }
+
+
 
 }

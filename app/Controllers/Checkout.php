@@ -24,10 +24,10 @@ $cart_details = $cart_object->getCartDetails($user_id);
 
 
 $cart_object->calculateTotal();
-//debug($cart_details);
+// debug($cart_details);
 
 
 //load views
 require_once APP_DIR . "Views/header1.php";
-require_once APP_DIR . "Views/pages/cart.php";
+require_once APP_DIR . "Views/pages/checkout.php";
 require_once APP_DIR . "Views/footer.php";
