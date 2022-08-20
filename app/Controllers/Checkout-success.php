@@ -47,13 +47,22 @@ switch ($payment) {
 //check if payment was completed
 //if array has data or if it's empty
 if(!$completed || empty($data)) {
-
-    echo "payment was not completed";
+    echo "payment process was not completed";
     exit;
 }
 
 
 //insert order 
+//to tell object to execute function
+$order_object->insertOrder(
+    $user_id,
+    $data["subtotal"],
+    $data["total"],
+    $data["total_discount_amount"],
+    $data["payment"],
+    $data["payment_id"]
+);
+
 
 
 //insert order details

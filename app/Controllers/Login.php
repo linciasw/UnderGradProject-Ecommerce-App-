@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["login"])) {
         if ($user_object->login($_POST)) {
             echo "Login was successful";
+            header("location: store");   
         }else {
             echo "Incorrect details";
         }
