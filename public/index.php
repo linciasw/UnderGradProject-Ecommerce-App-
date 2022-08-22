@@ -62,9 +62,8 @@ post($_ENV["PROJECT_PATH"] . 'checkout', 'app/Controllers/checkout.php');
 
 
 //http://localhost/web_app/templates
-get($_ENV["PROJECT_PATH"] . 'checkout/stripe', 'app/Controllers/checkout.php');
-post($_ENV["PROJECT_PATH"] . 'checkout/stripe', 'app/Controllers/checkout.php');
-
+get($_ENV["PROJECT_PATH"] . 'checkout/stripe', 'app/Controllers/Checkout-stripe.php');
+post($_ENV["PROJECT_PATH"] . 'checkout/stripe', 'app/Controllers/Checkout-stripe.php');
 
 
 //http://localhost/web_app/templates

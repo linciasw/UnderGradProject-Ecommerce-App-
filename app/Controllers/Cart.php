@@ -28,6 +28,6 @@ $cart_object->calculateTotal();
 
 
 //load views
-require_once APP_DIR . "Views/header1.php";
+require_once APP_DIR . "Views/header.php";
 require_once APP_DIR . "Views/pages/cart.php";
 require_once APP_DIR . "Views/footer.php";

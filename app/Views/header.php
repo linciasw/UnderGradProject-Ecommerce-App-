@@ -39,12 +39,14 @@
 
 <body>
 
+<div class=container>
+
 <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
-        <div class="container-fluid"><a class="navbar-brand" href="http://localhost/web_app/homepage">SiliconTT</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand" href="<?php echo BASE_URL . "homepage"; ?>">SiliconTT</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav text-right text-white ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="#">About Us</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="http://localhost/web_app/store">Products</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "store"; ?>">Products</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Shopping Tools</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Customer Service</a></li>
                 </ul>
@@ -53,11 +55,38 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#"><i class="fa fa-search"></i></a></li>
                     <li class="nav-item" role="presentation"></li>
 
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="http://localhost/web_app/login">Log In</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="http://localhost/web_app/registration">Sign Up</a></li>
+
+                    <?php 
+                        if(isset($_SESSION ["current_user"])){
+                      ?>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "logout"; ?>">Log Out</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "cart"; ?>">Cart</a></li>
+                            
+                    <?php 
+                        } else {
+                    ?>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "login"; ?>">Log In</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "registration"; ?>">Sign Up</a></li>
+                    <?php
+                        }
+
+
+                        ?>
+                    
+                    
+    
+
+    
+
+
+
+
+                   
+
+
                 </ul>
             </div>
         </div>
 
-        
+        </div>
     </nav>

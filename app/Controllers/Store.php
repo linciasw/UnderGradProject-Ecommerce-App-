@@ -12,7 +12,7 @@ $product_object = new Product($db_object);
 
 
 //shows the user log in info on screen as an array
-//debug($_POST);
+debug($_POST);
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -27,6 +27,6 @@ $product_details = $product_object->getAllProducts();
 
 
 //load views
-require_once APP_DIR . "Views/header1.php";
+require_once APP_DIR . "Views/header.php";
 require_once APP_DIR . "Views/pages/store.php";
 require_once APP_DIR . "Views/footer.php";

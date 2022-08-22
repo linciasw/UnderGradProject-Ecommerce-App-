@@ -13,6 +13,13 @@ $cart_details = $cart_object->getCartDetails($user_id);
 
 
 
+if (empty($cart_details)) {
+    echo "Cart is empty";
+    exit;
+}
+
+
+
 //calculate total
 $cart_object->calculateTotal();
 
@@ -52,9 +59,18 @@ if(!$completed || empty($data)) {
 }
 
 
+
+echo "<h1>Testing: Do not insert as yest</h1>";
+exit;
+
+
+
+//check if cart is empty
+
+
 //insert order 
-//to tell object to execute function
-$order_object->insertOrder(
+//to tell order id object to execute function
+$order_id = $order_object->insertOrder(
     $user_id,
     $data["subtotal"],
     $data["total"],
@@ -66,3 +82,4 @@ $order_object->insertOrder(
 
 
 //insert order details
+$order_object->insertOrderDetails($cart_details, $order_id);

@@ -2,6 +2,7 @@
 
 //required files
 require_once APP_DIR . "Config/Database.php";
+require_once APP_DIR . "Config/Stripeclient.php";
 require_once APP_DIR . "Models/User.php";
 require_once APP_DIR . "Models/Cart.php";
 require_once APP_DIR . "Models/Order.php";

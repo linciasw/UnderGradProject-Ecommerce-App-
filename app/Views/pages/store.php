@@ -186,17 +186,14 @@
 
    						<div class="col-md-4">
 
-   							<div class="rating text-right">
-   								<i class="fa fa-star"></i>
-   								<i class="fa fa-star"></i>
-   								<i class="fa fa-star"></i>
+
    								
    					</div>
 
 
             </figcaption>
 			<div class="bottom-wrap">
-				<a href="#" class="btn  btn-primary float-right" data-abc="true"> Buy now </a>
+
 				<div class="price-wrap">
 					<span class="price h5"></span>  $<?php echo $data["product_price"]; ?><br> <small class="text-success">Free shipping</small>
 				</div>

@@ -2,103 +2,109 @@
 
 
 
+        /*
+    *
+    * ==========================================
+    * CUSTOM UTIL CLASSES
+    * ==========================================
+    *
+    */
+
+    /* DEMO GENERAL ============================== */
+    .hover {
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 60%;
+    }
+
+    .hover-overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 90;
+      transition: all 0.4s;
+    }
+
+    .hover img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s;
+    }
+
+    .hover-content {
+      position: relative;
+      z-index: 99;
+    }
+
+
+
+    /* DEMO 1 ==============================  */
+    .hover-1 img {
+      width: 105%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -5%;
+      transition: all 0.3s;
+      overflow: hidden;
+    }
+
+    .hover-1-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 99;
+      transition: all 0.4s;
+    }
+
+    .hover-1 .hover-overlay {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hover-1-description {
+      transform: translateY(0.5rem);
+      transition: all 0.4s;
+      opacity: 0;
+    }
+
+    .hover-1:hover .hover-1-content {
+      bottom: 2rem;
+    }
+
+    .hover-1:hover .hover-1-description {
+      opacity: 1;
+      transform: none;
+    }
+
+    .hover-1:hover img {
+      left: 0;
+    }
+
+    .hover-1:hover .hover-overlay {
+      opacity: 0;
+    }
+
+
+
+
+
+
     /*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*
-*/
-
-/* DEMO GENERAL ============================== */
-.hover {
-  overflow: hidden;
-  position: relative;
-  padding-bottom: 60%;
-}
-
-.hover-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  transition: all 0.4s;
-}
-
-.hover img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.3s;
-}
-
-.hover-content {
-  position: relative;
-  z-index: 99;
-}
-
-
-/* DEMO 1 ============================== */
-.hover-1 img {
-  width: 105%;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: -5%;
-  transition: all 0.3s;
-}
-
-.hover-1-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-  transition: all 0.4s;
-}
-
-.hover-1 .hover-overlay {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.hover-1-description {
-  transform: translateY(0.5rem);
-  transition: all 0.4s;
-  opacity: 0;
-}
-
-.hover-1:hover .hover-1-content {
-  bottom: 2rem;
-}
-
-.hover-1:hover .hover-1-description {
-  opacity: 1;
-  transform: none;
-}
-
-.hover-1:hover img {
-  left: 0;
-}
-
-.hover-1:hover .hover-overlay {
-  opacity: 0;
-}
-
-
-
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSES
-* ==========================================
-*
-*/
-/* body {
-  min-height: 100vh;
-  background-color: #fafafa;
-} */
+    *
+    * ==========================================
+    * FOR DEMO PURPOSES
+    * ==========================================
+    *
+    */
+    /* body {
+      min-height: 100vh;
+      background-color: #fafafa;
+    } */
 </style>
 
 
@@ -123,9 +129,12 @@
     <h3 class="font-weight-bold mb-0">Demo 1</h3>
     <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 -->
+
+<div class="container"></div>
+
     <div class="row">
-      <div class="col-md-12 mb-3 mb-lg-0">
-        <div class="hover hover-1 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt="">
+      <div class="col-md-12">
+        <div class="img-fluid hover hover-1 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt="">
           <div class="hover-overlay"></div>
           <div class="hover-1-content px-5 py-4">
             <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light"></span>WELCOME TO SILICONTT</h3>
@@ -135,4 +144,5 @@
       </div>
 
 
+</div>
 </div>
