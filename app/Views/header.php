@@ -47,7 +47,18 @@
                 <ul class="nav navbar-nav text-right text-white ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="#">About Us</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "store"; ?>">Products</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Shopping Tools</a></li>
+
+                    <div class="nav-item dropdown">
+				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Shopping Tools</a>
+
+				<div class="dropdown-menu">					
+					<a href="#" class="dropdown-item">Desktop Buying Guide</a>
+					<a href="#" class="dropdown-item">How To Choose A Hard Drive</a>
+					<a href="#" class="dropdown-item">Laptop Buying Guide</a>
+                </div>
+
+                 </div> 
+
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Customer Service</a></li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto">

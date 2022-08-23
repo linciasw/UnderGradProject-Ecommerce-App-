@@ -163,51 +163,46 @@
 
 <div class="container">
   	
+        <?php require_once APP_DIR . "Views/includes/store-filter.php"; ?>
+        <div class="row">
 
-   <div class="row">
+        <?php foreach ($product_details as $data) :
+            $link = BASE_URL . "details/{$data["product_id"]}";   
+            ?>
 
-   <?php foreach ($product_details as $data) :
-    $link = BASE_URL . "details/{$data["product_id"]}";   
-    ?>
+            <div class="col-md-4">
+                <figure class="card card-product-grid card-lg">
+                    <a href="<?php echo $link; ?>" class="img-wrap" data-abc="true">
+                        <img src="<?php echo BASE_URL . $data["product_image1"]; ?>"></a>
+                    <figcaption class="info-wrap">
 
-	<div class="col-md-4">
-		<figure class="card card-product-grid card-lg">
-			<a href="<?php echo $link; ?>" class="img-wrap" data-abc="true">
-                <img src="<?php echo BASE_URL . $data["product_image1"]; ?>"></a>
-			<figcaption class="info-wrap">
+                            <div class="row">
 
-   					<div class="row">
+                                <div class="col-md-8">
 
-   						<div class="col-md-8">
+                                    <a href="<?php echo $link; ?>" class="title" data-abc="true"><?php echo $data["product_title"]; ?></a>
+                                    
+                                </div>
 
-   							<a href="<?php echo $link; ?>" class="title" data-abc="true"><?php echo $data["product_title"]; ?></a>
-   							
-   						</div>
+                            </div>
 
-   						<div class="col-md-4">
+                    </figcaption>
+                    <div class="bottom-wrap">
 
+                        <div class="price-wrap">
+                            <span class="price h5"></span>  $<?php echo $data["product_price"]; ?><br> <small class="text-success">Free shipping</small>
+                        </div>
+                    </div> 
+                    
+                </figure>
+            </div>
 
-   								
-   					</div>
-
-
-            </figcaption>
-			<div class="bottom-wrap">
-
-				<div class="price-wrap">
-					<span class="price h5"></span>  $<?php echo $data["product_price"]; ?><br> <small class="text-success">Free shipping</small>
-				</div>
-			</div> 
-		</figure>
-	</div>
-
-    <?php endforeach; ?>
-   							
-   						</div>
+            <?php endforeach; ?>
+                                    
+        </div>
    						
-   					</div>			
+</div>			
 
 
-</div>
 
 	
