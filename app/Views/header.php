@@ -52,7 +52,18 @@
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#"><i class="fa fa-search"></i></a></li>
+                   <!-- <li class="nav-item" role="presentation"><a name="search" class="nav-link" href="#"><i class="fa fa-search"></i></a></li> -->
+                   <form class="navbar-form form-inline">
+		
+                        <div class="input-group search-box">								
+                            <input name="search" type="text" id="search" class="form-control" placeholder="Search here...">
+                            <div class="input-group-append">
+                              <!--  <span class="input-group-text"></span> -->
+                            </div>
+                        </div>
+        
+
+                   </form>
                     <li class="nav-item" role="presentation"></li>
 
 
