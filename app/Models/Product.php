@@ -115,4 +115,76 @@ class Product
     }
 
 
+
+
+    
+    public function getRandomProducts() {
+        $sql = "SELECT * FROM products ORDER BY RAND() LIMIT 3";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    
+
+
+    public function getLatestProducts() {
+        $sql = "SELECT * FROM products ORDER BY product_created DESC LIMIT 3";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+
+
+    
+    public function getBestsellingProducts() {
+        $sql = "SELECT *, COUNT(order_details.product_id) times_sold 
+        FROM order_details, products
+        WHERE order_details.product_id = products.product_id
+        GROUP BY order_details.product_id
+        ";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+
+
+    
+    public function getBestWeeklySellingProducts() {
+        $sql = "SELECT *, COUNT(order_details.product_id) times_sold 
+        FROM order_details, products
+        WHERE order_details.product_id = products.product_id
+        AND order_details_created >= '2022-05-1 00:00:00'
+        AND order_details_created <= '2022-05-8 23:59:00'
+        GROUP BY order_details.product_id"
+        ;
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+
+    
+
+    public function getRecommendedProducts($product_id) {
+        $sql = "SELECT * 
+        FROM products
+        WHERE product_id in
+        (select distinct product_id from order_details where order_id in
+        (select distinct order_id from order_details where product_id = ?)
+        and product_id != ?)"
+        ;
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$product_id, $product_id]);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+
 }

@@ -1,7 +1,6 @@
 <style>
 
 
-
         /*
     *
     * ==========================================
@@ -130,15 +129,19 @@
     <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 -->
 
-<div class="container"></div>
+<div class="container">
 
     <div class="row">
       <div class="col-md-12">
-        <div class="img-fluid hover hover-1 text-white rounded"><img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt="">
+        <div class="img-fluid">
+          <img src="https://bootstrapious.com/i/snippets/sn-img-hover/hoverSet-3.jpg" alt="">
           <div class="hover-overlay"></div>
           <div class="hover-1-content px-5 py-4">
-            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light"></span>WELCOME TO SILICONTT</h3>
+            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> 
+            <blockquote class="blockquote text-center">
+              <span class="font-weight-light"></span>WELCOME TO SILICONTT</h3>
             <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </blockquote>
           </div>
         </div>
       </div>

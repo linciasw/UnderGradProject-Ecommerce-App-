@@ -41,9 +41,10 @@
 
 <div class=container>
 
-<nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
         <div class="container-fluid"><a class="navbar-brand" href="<?php echo BASE_URL . "homepage"; ?>">SiliconTT</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
+
                 <ul class="nav navbar-nav text-right text-white ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="#">About Us</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "store"; ?>">Products</a></li>
@@ -51,36 +52,43 @@
                     <div class="nav-item dropdown">
 				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Shopping Tools</a>
 
-				<div class="dropdown-menu">					
+			    <div class="dropdown-menu">					
 					<a href="#" class="dropdown-item">Desktop Buying Guide</a>
 					<a href="#" class="dropdown-item">How To Choose A Hard Drive</a>
 					<a href="#" class="dropdown-item">Laptop Buying Guide</a>
                 </div>
-
+            
                  </div> 
 
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Customer Service</a></li>
                 </ul>
+
+
+
+
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"></li>
-                   <!-- <li class="nav-item" role="presentation"><a name="search" class="nav-link" href="#"><i class="fa fa-search"></i></a></li> -->
-                   <form class="navbar-form form-inline">
-		
-                        <div class="input-group search-box">								
-                            <input name="search" type="text" id="search" class="form-control" placeholder="Search here...">
-                            <div class="input-group-append">
-                              <!--  <span class="input-group-text"></span> -->
-                            </div>
-                        </div>
-        
-
-                   </form>
                     <li class="nav-item" role="presentation"></li>
+                            <!-- search bar to only show when user logged in and gets redirected to store page -->
+                            <form class="navbar-form form-inline">
+
+                                <div class="input-group search-box">								
+                                    <input name="search" type="text" id="search" class="form-control" placeholder="Search here...">
+                                    <div class="input-group-append">
+                                    <!--  <span class="input-group-text"></span> -->
+                                    </div>
+                                </div>
+
+                            </form>
 
 
+
+                            <!-- to only show search bar, log out and cart when logged in -->
                     <?php 
                         if(isset($_SESSION ["current_user"])){
                       ?>
+
+
                             <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "logout"; ?>">Log Out</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "cart"; ?>">Cart</a></li>
                             
@@ -95,20 +103,12 @@
 
                         ?>
                     
-                    
-    
-
-    
-
-
-
-
-                   
-
+                
 
                 </ul>
             </div>
         </div>
 
-        </div>
+      
     </nav>
+</div>

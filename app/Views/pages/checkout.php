@@ -1,4 +1,11 @@
 <style>
+
+
+	.container {
+        margin-top: 60px;
+    } 
+
+
 	.shopping-cart{
 		padding-bottom: 50px;
 		font-family: 'Montserrat', sans-serif;
@@ -142,8 +149,8 @@
 	 	<section class="shopping-cart dark">
 	 		<div class="container">
 		        <div class="block-heading">
-		          <h2>Shopping Cart</h2>
-		          <p>Details of your cart is displayed below</p>
+		          <h2>Checkout</h2>
+		          <p>Ready to checkout?</p>
 		        </div>
 		        <div class="content">
 	 				<div class="row">

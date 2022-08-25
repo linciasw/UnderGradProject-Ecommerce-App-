@@ -1,4 +1,13 @@
 <style>
+
+
+
+	.container {
+			margin-top: 60px;
+		} 
+
+
+
 	.shopping-cart{
 		padding-bottom: 50px;
 		font-family: 'Montserrat', sans-serif;
@@ -130,19 +139,20 @@
 			padding: 4px 10px;
 			text-align: center; 
 		}
-}
+	}
 
 </style>
 
 
 
 
-
+<section class="shopping-cart dark">
 	 		<div class="container">
 		        <div class="block-heading">
 		          <h2>Shopping Cart</h2>
 		          <p>Details of your cart is displayed below</p>
 		        </div>
+				
 		        <div class="content">
 	 				<div class="row">
 
@@ -196,12 +206,14 @@
 			 					<div class="summary-item"><span class="text">Subtotal</span><span class="price">$<?php echo $cart_object->getSubtotal(); ?></span></div>
 			 					<div class="summary-item"><span class="text">Shipping</span><span class="price">$0</span></div>
 			 					<div class="summary-item"><span class="text">Total</span><span class="price">$<?php echo $cart_object->getTotal(); ?></span></div>
+								<!-- <button type="button" class="btn btn-primary btn-lg btn-block" id="checkout-button"><a href=" <?php echo BASE_URL . "checkout"; ?>">Checkout</a></button> -->
 			 					<button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
 				 			</div>
 			 			</div>
 		 			</div> 
 		 		</div>
 	 		</div>
-
+							</section>
+							</main>
 
 

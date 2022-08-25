@@ -73,7 +73,6 @@
         <div class="form-group">
             <button type="submit" name ="login" class="btn btn-primary btn-lg btn-block">Sign in</button>
         </div>
-        <p><a href="#">Lost your Password?</a></p>
 		<p class="text-center small">Don't have an account? <a href="http://localhost/web_app/registration">Sign up here!</a></p>
     </form>
 

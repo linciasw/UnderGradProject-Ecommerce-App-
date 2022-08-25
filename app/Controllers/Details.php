@@ -16,8 +16,8 @@ $cart_object = new Cart($db_object);
 
 
 //shows the user log in info on screen as an array
-debug($_POST);
-debug($_SESSION);
+//debug($_POST);
+//debug($_SESSION);
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -43,4 +43,6 @@ foreach ($product_details as $data) {
 //load views
 require_once APP_DIR . "Views/header.php";
 require_once APP_DIR . "Views/pages/details.php";
+require_once APP_DIR . "Views/includes/recommended-products.php";
+//require_once APP_DIR . "Views/includes/slider.php";
 require_once APP_DIR . "Views/footer.php";
