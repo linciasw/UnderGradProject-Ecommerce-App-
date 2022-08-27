@@ -41,6 +41,11 @@ switch ($payment) {
 
     case 'stripe':
         # code...
+        $payment_object = new Stripehelper();
+        $checkout_order = $payment_object->getCheckoutOrder($id);
+        //debug($checkout_order);
+        $completed = $payment_object->isCheckoutCompleted($checkout_order);
+        $data = $payment_object->getPaymentDetails($checkout_order);
         break;
   
     
@@ -58,10 +63,6 @@ if(!$completed || empty($data)) {
     exit;
 }
 
-
-
-echo "<h1>Testing: Do not insert as yest</h1>";
-exit;
 
 
 
