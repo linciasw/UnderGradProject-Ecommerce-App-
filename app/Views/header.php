@@ -42,7 +42,7 @@
 <div class=container>
 
     <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
-        <div class="container-fluid"><a class="navbar-brand" href="<?php echo BASE_URL . "homepage"; ?>">SiliconTT</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand" href="<?php echo BASE_URL . "homepage"; ?>">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
 
                 <ul class="nav navbar-nav text-right text-white ml-auto">
@@ -60,7 +60,7 @@
             
                  </div> 
 
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Customer Service</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "orders"; ?>">Orders</a></li>
                 </ul>
 
 

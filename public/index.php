@@ -71,6 +71,15 @@ get($_ENV["PROJECT_PATH"] . 'checkout/success/$payment/$id', 'app/Controllers/Ch
 post($_ENV["PROJECT_PATH"] . 'checkout/success/$payment/$id', 'app/Controllers/Checkout-success.php');
 
 
+//http://localhost/web_app/logout
+get($_ENV["PROJECT_PATH"] . 'orders', 'app/Controllers/Orders.php');
+post($_ENV["PROJECT_PATH"] . 'orders', 'app/Controllers/Orders.php');
+
+
+//http://localhost/web_app/logout
+get($_ENV["PROJECT_PATH"] . 'orders/details/$id', 'app/Controllers/Order-details.php');
+post($_ENV["PROJECT_PATH"] . 'orders/details/$id', 'app/Controllers/Order-details.php');
+
 
 
 
