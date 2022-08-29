@@ -10,7 +10,7 @@ $user_object = new User($db_object);
 
 
 //shows the user log in info on screen as an array
-debug($_POST);
+//debug($_POST);
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

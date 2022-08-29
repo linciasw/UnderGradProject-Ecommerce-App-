@@ -18,7 +18,7 @@ $YOUR_DOMAIN = BASE_URL;
 $checkout_session = $stripe->checkout->sessions->create([
   'line_items' => [[
     'price_data' => [
-        'currency' => 'USD',
+        'currency' => 'TTD',
         'unit_amount' => $cart_object->getTotal() * 100,
         'product_data' => [
         'name' => 'Cart Checkout',
@@ -33,6 +33,7 @@ $checkout_session = $stripe->checkout->sessions->create([
   'payment_method_types' => ['card'],
   'mode' => 'payment',
   'success_url' => $YOUR_DOMAIN . 'checkout/success/stripe/{CHECKOUT_SESSION_ID}',
+  //'success_url' => $YOUR_DOMAIN . 'views/pages/checkout-success.php',
   'cancel_url' => $YOUR_DOMAIN . 'checkout',
 ]);
 
