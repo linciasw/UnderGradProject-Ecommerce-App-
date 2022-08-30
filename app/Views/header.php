@@ -46,7 +46,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
 
                 <ul class="nav navbar-nav text-right text-white ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">About Us</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "store"; ?>">Products</a></li>
 
                     <div class="nav-item dropdown">
@@ -60,7 +60,11 @@
             
                  </div> 
 
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "orders"; ?>">Orders</a></li>
+                            
+                 <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact Us</a></li>
+                   
+                
+                        
                 </ul>
 
 
@@ -88,10 +92,18 @@
                         if(isset($_SESSION ["current_user"])){
                       ?>
 
+                            <div class="nav-item dropdown">
+                                <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Account Menu</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="<?php echo BASE_URL . "logout"; ?>">Log Out</a>
+                                        <a class="dropdown-item" href="<?php echo BASE_URL . "cart"; ?>">Cart</a>
+                                        <a class="dropdown-item" href="<?php echo BASE_URL . "orders"; ?>">Orders</a>
+                                    </div>
 
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "logout"; ?>">Log Out</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "cart"; ?>">Cart</a></li>
-                            
+
+                            </div>
+
+
                     <?php 
                         } else {
                     ?>
