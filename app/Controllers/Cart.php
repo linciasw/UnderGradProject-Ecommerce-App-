@@ -29,5 +29,15 @@ $cart_object->calculateTotal();
 
 //load views
 require_once APP_DIR . "Views/header.php";
-require_once APP_DIR . "Views/pages/cart.php";
+
+if(empty($cart_details)) {
+    require_once APP_DIR . "Views/includes/cart-no-results.php";
+
+}else {
+
+    require_once APP_DIR . "Views/pages/cart.php";
+}
+
+
+
 require_once APP_DIR . "Views/footer.php";
