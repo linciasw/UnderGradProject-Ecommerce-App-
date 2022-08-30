@@ -13,16 +13,19 @@ $user_object = new User($db_object);
 //debug($_POST);
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["login"])) {
+
         if ($user_object->login($_POST)) {
-            echo "Login was successful";
+            $_SESSION["message"] = "Login Successful! Welcome to SiliconTT.";
+            //echo "Login was successful";
             header("location: homepage");   
         }else {
-            echo "Incorrect details";
+           //echo "Incorrect details";
+           $_SESSION["message"] = "Login unsuccessful! Incorrect email or password entered.";
         }
     }
-}
+// }
 
 
          
@@ -31,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 //load views
 require_once APP_DIR . "Views/header.php";
+require_once APP_DIR . "Views/includes/alerts.php";
 require_once APP_DIR . "Views/pages/login.php";
 require_once APP_DIR . "Views/footer.php";
 
