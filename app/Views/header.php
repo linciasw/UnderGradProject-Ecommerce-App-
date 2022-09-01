@@ -47,22 +47,22 @@
             <div class="collapse navbar-collapse" id="navcol-1">
 
                 <ul class="nav navbar-nav text-right text-white ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "aboutus"; ?>">About Us</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "store"; ?>">Products</a></li>
 
                     <div class="nav-item dropdown">
 				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Shopping Tools</a>
 
 			    <div class="dropdown-menu">					
-					<a href="#" class="dropdown-item">Desktop Buying Guide</a>
-					<a href="#" class="dropdown-item">How To Choose A Hard Drive</a>
-					<a href="#" class="dropdown-item">Laptop Buying Guide</a>
+					<a href="<?php echo BASE_URL . "desktop"; ?>" class="dropdown-item">Desktop Buying Guide</a>
+					<a href="<?php echo BASE_URL . "hard-drive"; ?>" class="dropdown-item">How To Choose A Hard Drive</a>
+					<a href="<?php echo BASE_URL . "laptop"; ?>" class="dropdown-item">Laptop Buying Guide</a>
                 </div>
             
                  </div> 
 
                             
-                 <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact Us</a></li>
+                 <li class="nav-item" role="presentation"><a class="nav-link" href="<?php echo BASE_URL . "contactus"; ?>">Contact Us</a></li>
                    
                 
                         

@@ -81,6 +81,32 @@ get($_ENV["PROJECT_PATH"] . 'orders/details/$id', 'app/Controllers/Order-details
 post($_ENV["PROJECT_PATH"] . 'orders/details/$id', 'app/Controllers/Order-details.php');
 
 
+//http://localhost/web_app/templates
+get($_ENV["PROJECT_PATH"] . 'contactus', 'app/Controllers/Contactus.php');
+post($_ENV["PROJECT_PATH"] . 'contactus', 'app/Controllers/Contactus.php');
+
+
+//http://localhost/web_app/templates
+get($_ENV["PROJECT_PATH"] . 'aboutus', 'app/Controllers/Aboutus.php');
+post($_ENV["PROJECT_PATH"] . 'aboutus', 'app/Controllers/Aboutus.php');
+
+
+
+//http://localhost/web_app/templates
+get($_ENV["PROJECT_PATH"] . 'desktop', 'app/Controllers/Shoppingtools1.php');
+post($_ENV["PROJECT_PATH"] . 'desktop', 'app/Controllers/Shoppingtools1.php');
+
+
+
+//http://localhost/web_app/templates
+get($_ENV["PROJECT_PATH"] . 'laptop', 'app/Controllers/Shoppingtools2.php');
+post($_ENV["PROJECT_PATH"] . 'laptop', 'app/Controllers/Shoppingtools2.php');
+
+
+//http://localhost/web_app/templates
+get($_ENV["PROJECT_PATH"] . 'hard-drive', 'app/Controllers/Shoppingtools3.php');
+post($_ENV["PROJECT_PATH"] . 'hard-drive', 'app/Controllers/Shoppingtools3.php');
+
 
 
 
