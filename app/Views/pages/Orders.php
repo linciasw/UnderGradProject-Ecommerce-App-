@@ -13,8 +13,8 @@
 
 
 <div class="container">
-    <h2>Hover Row</h2>
-    <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+    <h2>Orders</h2>
+    <!-- <p></p>             -->
         <table class="table table-hover">
             <thead>
             <tr>

@@ -32,7 +32,7 @@
 		text-align: center;
 		max-width: 420px;
 		margin: auto;
-		opacity:0.7;
+	    opacity:0.7; 
 	}
 
 	.shopping-cart .dark .block-heading p{
@@ -87,7 +87,7 @@
 
 	.shopping-cart .summary{
 		border-top: 2px solid #5ea4f3;
-		background-color: #f7fbff;
+	    background-color: #f7fbff; 
 		height: 100%;
 		padding: 30px;
 	}
@@ -98,7 +98,8 @@
 		font-weight: 600;
 		padding-top: 20px;
 		padding-bottom: 20px;
-	}
+		
+	} 
 
 	.shopping-cart .summary .summary-item:not(:last-of-type){
 		padding-bottom: 10px;
@@ -116,8 +117,9 @@
 		float: right;
 	}
 
-	.shopping-cart .summary button{
+	.shopping-cart .summary a{
 		margin-top: 20px;
+
 	}
 
 	@media (min-width: 768px) {
@@ -206,8 +208,9 @@
 			 					<div class="summary-item"><span class="text">Subtotal</span><span class="price">$<?php echo $cart_object->getSubtotal(); ?></span></div>
 			 					<div class="summary-item"><span class="text">Shipping</span><span class="price">$0</span></div>
 			 					<div class="summary-item"><span class="text">Total</span><span class="price">$<?php echo $cart_object->getTotal(); ?></span></div>
-								<!-- <button type="button" class="btn btn-primary btn-lg btn-block" id="checkout-button"><a href=" <?php echo BASE_URL . "checkout"; ?>">Checkout</a></button> -->
-			 					<button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>
+							    <!-- <button type="button" class="btn btn-primary btn-lg btn-block"></button> -->
+			 					<!-- <button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button>  -->
+								<a class="btn btn-primary btn-lg btn-block" href="<?php echo BASE_URL . "checkout"; ?>">Proceed To Checkout</a>
 				 			</div>
 			 			</div>
 		 			</div> 

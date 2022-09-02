@@ -55,7 +55,7 @@
 
 			    <div class="dropdown-menu">					
 					<a href="<?php echo BASE_URL . "desktop"; ?>" class="dropdown-item">Desktop Buying Guide</a>
-					<a href="<?php echo BASE_URL . "hard-drive"; ?>" class="dropdown-item">How To Choose A Hard Drive</a>
+					<a href="<?php echo BASE_URL . "hard-drive"; ?>" class="dropdown-item">Hard Drive Buying Guide</a>
 					<a href="<?php echo BASE_URL . "laptop"; ?>" class="dropdown-item">Laptop Buying Guide</a>
                 </div>
             
@@ -94,7 +94,7 @@
                       ?>
 
                             <div class="nav-item dropdown">
-                                <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Account Menu</a>
+                                <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle"><?php echo $_SESSION["current_user"]["first_name"] ?></a>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="<?php echo BASE_URL . "logout"; ?>">Log Out</a>
                                         <a class="dropdown-item" href="<?php echo BASE_URL . "cart"; ?>">Cart</a>

@@ -60,8 +60,6 @@
 
 
 
-
-
             <li class="list-group-item">
                     <!-- Custom content-->
                     <div class="media align-items-lg-center flex-column flex-lg-row p-3">

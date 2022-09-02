@@ -20,12 +20,14 @@ $user_object = new User($db_object);
             $_SESSION["message"] = "Login Successful! Welcome to SiliconTT.";
             //echo "Login was successful";
             header("location: homepage");   
+            exit;
         }else {
            //echo "Incorrect details";
            $_SESSION["message"] = "Login unsuccessful! Incorrect email or password entered.";
         }
     }
 // }
+
 
 
          
