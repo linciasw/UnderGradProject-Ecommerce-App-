@@ -22,9 +22,12 @@ $cart_object = new Cart($db_object);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if (isset($_POST["cart_quantity"])) {
-        echo "you clicked a button";
+
         require_once APP_DIR . "Utils/code.isLoggedIn.php";
         $cart_object->addToCart($user_id, $id, $_POST["cart_quantity"]);
+        $_SESSION["message"] = "Product added to cart!";
+        header("location: " . BASE_URL . "homepage");
+        exit;
     }
 }
 
@@ -42,6 +45,7 @@ foreach ($product_details as $data) {
 
 //load views
 require_once APP_DIR . "Views/header.php";
+require_once APP_DIR . "Views/includes/alerts.php";
 require_once APP_DIR . "Views/pages/details.php";
 require_once APP_DIR . "Views/includes/recommended-products.php";
 //require_once APP_DIR . "Views/includes/slider.php";

@@ -16,6 +16,7 @@ require_once APP_DIR . "Utils/code.precheckout.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if (isset($_POST["cart_id"])) {
         $cart_object->removeFromCart($_POST["cart_id"], $user_id);
+        
     }
 }
 

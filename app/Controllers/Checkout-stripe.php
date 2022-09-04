@@ -33,7 +33,6 @@ $checkout_session = $stripe->checkout->sessions->create([
   'payment_method_types' => ['card'],
   'mode' => 'payment',
   'success_url' => $YOUR_DOMAIN . 'checkout/success/stripe/{CHECKOUT_SESSION_ID}',
-  //'success_url' => $YOUR_DOMAIN . 'views/pages/checkout-success.php',
   'cancel_url' => $YOUR_DOMAIN . 'checkout',
 ]);
 

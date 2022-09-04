@@ -108,6 +108,11 @@ get($_ENV["PROJECT_PATH"] . 'hard-drive', 'app/Controllers/Shoppingtools3.php');
 post($_ENV["PROJECT_PATH"] . 'hard-drive', 'app/Controllers/Shoppingtools3.php');
 
 
+//http://localhost/web_app/templates
+get($_ENV["PROJECT_PATH"] . 'thanks', 'app/Controllers/Thanks.php');
+post($_ENV["PROJECT_PATH"] . 'thanks', 'app/Controllers/Thanks.php');
+
+
 
 
 

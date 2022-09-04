@@ -84,3 +84,7 @@ $order_id = $order_object->insertOrder(
 
 //insert order details
 $order_object->insertOrderDetails($cart_details, $order_id);
+
+
+header("location: " . BASE_URL . "thanks");
+exit;
