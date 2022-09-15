@@ -32,7 +32,7 @@ class Order
 
 
 
-        $sql = "INSERT INTO `web_app_database`.`orders`
+        $sql = "INSERT INTO `web_app_database2`.`orders`
         (`order_id`,
         `user_id`,
         `subtotal`,
@@ -87,7 +87,7 @@ class Order
     
 
     public function multiInsert($data) {
-        $sql = "INSERT INTO `web_app_database`.`order_details`
+        $sql = "INSERT INTO `web_app_database2`.`order_details`
         (`order_details_id`,
         `order_id`,
         `product_id`,

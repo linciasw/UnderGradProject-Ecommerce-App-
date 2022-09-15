@@ -54,7 +54,7 @@ class Cart
             "cart_quantity" => $cart_quantity
         ];
 
-        $sql = "INSERT INTO `web_app_database`.`cart`
+        $sql = "INSERT INTO `web_app_database2`.`cart`
         (`cart_id`,
         `user_id`,
         `product_id`,
