@@ -22,7 +22,7 @@
 
 
 <h1>Your cart is empty</h1>
-<p>Continue shopping</p>
+<p>Continue shopping <a href="<?php echo BASE_URL . "store"; ?>">here</a></p>
 
 
 

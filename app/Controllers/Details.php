@@ -1,5 +1,6 @@
 <?php
 
+
 //required files
 require_once APP_DIR . "Config/Database.php";
 require_once APP_DIR . "Models/User.php";
