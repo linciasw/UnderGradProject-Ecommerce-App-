@@ -1,0 +1,1 @@
+SELECT * FROM web_app_database.products;
